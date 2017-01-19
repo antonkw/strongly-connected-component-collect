@@ -4,7 +4,6 @@ import CollectSCC.AdjList
 import scala.collection.AbstractSeq
 import scala.collection.mutable.ArrayBuffer
 
-
 object CollectSCC extends App {
   type AdjList = ArrayBuffer[Int]
 
@@ -42,7 +41,6 @@ class Solve extends Runnable {
     println(new GraphUtils().collectSCCs(this.array).length)
   }
 }
-
 
 class GraphUtils {
   def collectSCCs(adj: Array[AdjList]): List[AbstractSeq[Int]] = {
@@ -130,6 +128,4 @@ class GraphUtils {
 
     collectAllSccHelper(List(), 0)
   }
-
-
 }
